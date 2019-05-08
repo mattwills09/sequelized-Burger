@@ -1,30 +1,40 @@
 
 var express = require("express");
 
-var PORT = process.env.PORT || 7000;
-
 var app = express();
 
-app.use(express.static("public"));
+var PORT = process.env.PORT || 7000;
 
+var db = require("./models");
+
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-//-----------------------------
-
-var exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
 
 //-----------------------------
 
-var routes = require("./controllers/burgers_controller.js");
+require("./routes/api-routes.js")(app);
 
-app.use(routes);
-
-//-----------------------------
-
-app.listen(PORT, function() {
-  console.log("App now listening at localhost:" + PORT);
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("Burger App Listening on PORT: " + PORT);
+  });
 });
+
+
+//=========================================
+
+
+// var exphbs = require("express-handlebars");
+
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
+
+// var routes = require("./controllers/burgers_controller.js");
+
+// app.use(routes);
+
+// app.listen(PORT, function() {
+//   console.log("App now listening at localhost:" + PORT);
+// });
