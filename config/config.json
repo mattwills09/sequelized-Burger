@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "KendallJane87",
-    "database": "burgers2_db",
-    "host": "127.0.0.1",
+    "username": "JAWSDBUSERNAME",
+    "password": "JAWSDBPASSWORD",
+    "database": "JAWSDBDATABASE",
+    "host": "JAWSDBHOST",
     "dialect": "mysql"
   }
 }
