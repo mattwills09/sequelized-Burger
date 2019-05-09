@@ -2,21 +2,21 @@
   "development": {
     "username": "root",
     "password": "KendallJane87",
-    "database": "burgers_db",
+    "database": "burgers2_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "KendallJane87",
-    "database": "burgers_db",
+    "database": "burgers2_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "KendallJane87",
-    "database": "burgers_db",
+    "database": "burgers2_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
