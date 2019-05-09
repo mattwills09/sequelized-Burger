@@ -1,5 +1,5 @@
 
-$(function() {
+$(document).ready(function() {
   $(".change-devoured").on("click", function(event) {
     var id = $(this).data("id");
     var wasDevoured = $(this).data("wasdevoured");
@@ -10,7 +10,7 @@ $(function() {
     console.log(wasDevoured);
     console.log(id);
 
-$.ajax("/api/burgers/" + id, {
+  $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: wasDevouredState
     }).then(
@@ -21,7 +21,9 @@ $.ajax("/api/burgers/" + id, {
       }
     );
   });
-  
+
+//=========================================
+
 $(".create-form").on("submit", function(event) {
   event.preventDefault();
 
@@ -36,10 +38,11 @@ $.ajax("/api/burgers", {
     }).then(function() {
         console.log("Created New Burger!");
 //Reload the page to update list
-        location.reload();
-      }
-    );
-  });
+        // location.reload();
+    });
+});
+
+//=========================================
 
 $(".delete-burger").on("click", function(event) {
   var id = $(this).data("id");

@@ -10,7 +10,7 @@ module.exports = function(app) {
                 burgers: results
             });
         });
-});
+    });
 
     // app.get("*", function(req, res) {
     //     res.render("404");
