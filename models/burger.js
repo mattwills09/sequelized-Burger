@@ -4,29 +4,18 @@ module.exports = function(sequelize, DataTypes) {
         burger_name: DataTypes.STRING,
         devoured: DataTypes.BOOLEAN
     });
-    
+
     return Burger;
 }
 
 
 
-// var orm = require("../config/orm.js");
-// var Sequelize = require("sequelize");
-
-// var sequelize = require("../config/connection.js");
-
-// var Burger = sequelize.define("burgers", {
-//     burger_name: Sequelize.STRING,
-//     devoured: Sequelize.STRING
-// });
-
-// Burger.sync();
-
-// module.exports = Burger;
-
-
 //==========================================
 
+// var orm = require("../config/orm.js");
+
+// var Sequelize = require("sequelize");
+// var sequelize = require("../config/connection.js");
 
 // var burger = {
 //     selectAll: function(cb) {

@@ -10,7 +10,7 @@ module.exports = function(app) {
         });
     });
 
-    app.post("/api/bugers", function(req, res) {
+    app.post("/api/burgers", function(req, res) {
         console.log("Burger Data: ");
         console.log(req.body);
 

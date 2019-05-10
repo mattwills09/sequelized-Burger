@@ -15,9 +15,9 @@ $(document).ready(function() {
       data: wasDevouredState
     }).then(
       function() {
-        console.log("changed devoured to: ", wasDevoured);
+        console.log(wasDevoured + " was just eaten!");
 //Reload the page to update list
-        location.reload();
+        // location.reload();
       }
     );
   });
@@ -37,6 +37,7 @@ $.ajax("/api/burgers", {
       data: newBurger
     }).then(function() {
         console.log("Created New Burger!");
+        console.log(newBurger);
 //Reload the page to update list
         // location.reload();
     });
@@ -52,9 +53,10 @@ $(".delete-burger").on("click", function(event) {
         type: "DELETE"
       }).then(function() {
           console.log("Deleted Burger: ", id);
+          console.log("Seeya later " + burger_name);
           
 //Reload the page to get the updated list
-          location.reload();
+          // location.reload();
         }
       );
   });

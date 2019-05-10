@@ -30,7 +30,6 @@ db.sequelize.sync().then(function() {
 //=========================================
 
 // app.use(routes);
-
 // var routes = require("./controllers/burgers_controller.js");
 
 
