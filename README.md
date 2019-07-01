@@ -1,4 +1,5 @@
-# sequelized-Eat-Da-Burger
+# Sequelized Version of Eat-Da-Burger!
+___
 
 In this project, we were asked to sequelize our Eat-Da-Burger app that was previously created with ORM.  Completing this aspect of the project turned out to be slightly more difficult than the activities we've done in class, mainly because going from numerous files in the ORM way, to the more simplified sequelize version, I think I either over-edited the files, or just have a small typo somewhere.
 
